@@ -34,7 +34,8 @@ header p {
 .site-section {
   margin: 50px auto;
   max-width: 1200px;
-  padding: 20px;
+  width: 100%;
+  padding: 40px 20px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -42,6 +43,9 @@ header p {
   display: flex;           /* セクション内をflex化 */
   flex-direction: column;  /* 縦方向 */
   align-items: center;     /* セクション内中央揃え */
+
+  text-align: center;
+  
 }
 
 /* ============================= */
@@ -52,9 +56,9 @@ header p {
   flex-wrap: wrap;
   justify-content: center; /* 画像を中央揃え */
   gap: 20px;
-  width: 100%
+  width: 100%;
 
-  text-alian: center
+  text-alian: center;
   
 }
 
@@ -141,4 +145,5 @@ footer {
   color: white;
   margin-top: 50px;
 }
+
 
