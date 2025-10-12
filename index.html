@@ -58,27 +58,25 @@
     </div>
   </section>
 
-  <div id="lightbox">
-    <img src="" alt="拡大画像">
-  </div>
+<div id="lightbox">
+  <img src="" alt="拡大画像">
+</div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const imgs = document.querySelectorAll('.screenshots img');
+const lightboxImg = lightbox.querySelector('img');
 
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const images = document.querySelectorAll('.screenshots img');
+imgs.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
 
-    images.forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    });
-  </script>
-
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
 </body>
 </html>
+
