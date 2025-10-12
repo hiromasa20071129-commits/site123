@@ -3,42 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポートフォリオまとめ | Renovate Support</title>
+  <title>Web制作ポートフォリオ</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h1 { text-align: center; margin-bottom: 40px; }
-    .portfolio { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .site-card { border: 1px solid #ccc; padding: 10px; width: 300px; text-align: center; }
-    .site-card img { width: 100%; height: auto; }
-    .site-card a { text-decoration: none; color: #333; font-weight: bold; display: block; margin: 10px 0 0; }
-    .site-card p { font-size: 0.9rem; color: #555; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    h1, h2 { text-align: center; }
+    .site-section { margin: 50px 0; }
+    .screenshots { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .screenshots img { width: 300px; border: 1px solid #ccc; border-radius: 8px; }
   </style>
 </head>
 <body>
 
-  <h1>ポートフォリオまとめ</h1>
+  <header>
+    <h1>Web制作ポートフォリオ</h1>
+    <p>制作したサイトのスクリーンショット一覧</p>
+  </header>
 
-  <div class="portfolio">
-    <div class="site-card">
-      <img src="images/site1.png" alt="サイト1サムネイル">
-      <a href="https://hiromasa20071129-commits.github.io/company-site/" target="_blank">サイト1</a>
-      <p>ここに簡単な説明（作った内容・技術など）を入れる</p>
+  <!-- Site 1 -->
+  <section class="site-section" id="site1">
+    <h2>Site 1</h2>
+    <div class="screenshots">
+      <img src="images/site1/top.png" alt="Site1 トップページ">
+      <img src="images/site1/service.png" alt="Site1 サービス">
+      <img src="images/site1/works.png" alt="Site1 実績">
+      <img src="images/site1/contact.png" alt="Site1 お問い合わせ">
+      <img src="images/site1/banner.png" alt="Site1 バナー">
     </div>
+  </section>
 
-    <div class="site-card">
-      <img src="images/site2.png" alt="サイト2サムネイル">
-      <a href="https://hiromasa20071129-commits.github.io/renovateplus_demo/" target="_blank">サイト2</a>
-      <p>ここに簡単な説明（作った内容・技術など）を入れる</p>
+  <!-- Site 2 -->
+  <section class="site-section" id="site2">
+    <h2>Site 2</h2>
+    <div class="screenshots">
+      <img src="images/site2/top.png" alt="Site2 トップページ">
+      <img src="images/site2/service.png" alt="Site2 サービス">
+      <img src="images/site2/works.png" alt="Site2 実績">
     </div>
+  </section>
 
-    <div class="site-card">
-      <img src="images/site3.png" alt="サイト3サムネイル">
-      <a href="https://hiromasa20071129-commits.github.io/renovate_support/" target="_blank">サイト3</a>
-      <p>ここに簡単な説明（作った内容・技術など）を入れる</p>
+  <!-- Site 3 -->
+  <section class="site-section" id="site3">
+    <h2>Site 3</h2>
+    <div class="screenshots">
+      <img src="images/site3/home_1.png" alt="Site3 ホーム 1">
+      <img src="images/site3/home_2.png" alt="Site3 ホーム 2">
+      <img src="images/site3/home_3.png" alt="Site3 ホーム 3">
+      <img src="images/site3/home_4.png" alt="Site3 ホーム 4">
+      <img src="images/site3/thanks.png" alt="Site3 ありがとうございました">
     </div>
-  </div>
+  </section>
 
 </body>
 </html>
-
