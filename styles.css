@@ -38,6 +38,11 @@ header p {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* ============================= */
@@ -51,8 +56,8 @@ header p {
 }
 
 .screenshots img {
-  width: 500px;          /* 文字が読みやすいサイズ */
-  max-width: 90%;        /* 画面幅に合わせて縮小可能 */
+  width: 500px;
+  max-width: 90%;
   height: auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -69,15 +74,15 @@ header p {
 /* ライトボックス用 */
 /* ============================= */
 #lightbox {
-  display: none;              /* 初期状態は非表示 */
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  top:0;
+  left:0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.8);
-  justify-content: center;    /* 横中央揃え */
-  align-items: center;        /* 縦中央揃え */
+  justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
@@ -86,40 +91,6 @@ header p {
   max-height: 90%;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-/* ============================= */
-/* お問い合わせフォーム */
-/* ============================= */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: 0 auto;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  padding: 12px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 /* ============================= */
