@@ -52,11 +52,16 @@ header p {
   flex-wrap: wrap;
   justify-content: center; /* 画像を中央揃え */
   gap: 20px;
+  width: 100%
+
+  text-alian: center
+  
 }
 
 .screenshots img {
-  width: 500px;          /* 文字が読みやすいサイズ */
-  max-width: 90%;        /* 画面幅に合わせて縮小可能 */
+  
+  width: 100%;          /* 文字が読みやすいサイズ */
+  max-width: 500px;        /* 画面幅に合わせて縮小可能 */
   height: auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -136,3 +141,4 @@ footer {
   color: white;
   margin-top: 50px;
 }
+
