@@ -10,7 +10,13 @@
     h1, h2 { text-align: center; }
     .site-section { margin: 50px 0; }
     .screenshots { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .screenshots img { width: 300px; border: 1px solid #ccc; border-radius: 8px; }
+    .screenshots img { width: 300px; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
+    .site-info { max-width: 600px; margin: 20px auto; text-align: center; }
+    .description { font-size: 0.9rem; color: #333; margin-bottom: 10px; }
+    .btn-url { display: inline-block; background-color: #4a90e2; color: #fff; padding: 8px 15px; border-radius: 5px; margin: 5px; text-decoration: none; transition: 0.3s; }
+    .btn-url:hover { background-color: #357ab8; }
+    #lightbox { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
+    #lightbox img { max-width: 90%; max-height: 90%; }
   </style>
 </head>
 <body>
@@ -31,9 +37,15 @@
       <img src="images/site1/contact.png" alt="Site1 お問い合わせ">
       <img src="images/site1/thanks.png" alt="Site1 ありがとうございました">
     </div>
-    <p style="text-align:center; margin-top:15px;">
-      <a href="https://hiromasa20071129-commits.github.io/company-site/" target="_blank">🔗 実際のサイトを見る</a>
-    </p>
+    <div class="site-info">
+      <p class="description">
+        制作意図：高校生向けに簡単に情報を整理して閲覧できる「学習サイト風ポートフォリオ」として作成。レイアウトとUI設計の練習も兼ねる。<br>
+        使用技術：HTML5 / CSS3 / JavaScript（ライトボックス・カードレイアウト実装）<br>
+        ポイント：画像クリックで拡大表示。カード風デザインで情報を整理し、ユーザーが直感的に操作できるよう工夫。
+      </p>
+      <a href="https://hiromasa20071129-commits.github.io/company-site/" target="_blank" class="btn-url">サイトを見る</a>
+      <a href="https://github.com/sudo/site1" target="_blank" class="btn-url">GitHub</a>
+    </div>
   </section>
 
   <!-- Site 2 -->
@@ -47,10 +59,15 @@
       <img src="images/site2/contact_top.png" alt="Site2 お問い合わせ 上">
       <img src="images/site2/thanks.png" alt="Site2 ありがとうございました">
     </div>
-    <p style="text-align:center; margin-top:15px;">
-      <a href="https://hiromasa20071129-commits.github.io/renovateplus_demo/
-" target="_blank">🔗 実際のサイトを見る</a>
-    </p>
+    <div class="site-info">
+      <p class="description">
+        制作意図：日常的なテーマでデザインの練習。カフェ情報を直感的に見せるレイアウトを意識。ユーザーが目的の情報にすぐアクセスできることを重視。<br>
+        使用技術：HTML5 / CSS3 / Flexbox / hoverアニメーション<br>
+        ポイント：画像のホバーで拡大効果を付け、情報カードを見やすく整理。配色で清潔感と親しみやすさを演出。
+      </p>
+      <a href="https://hiromasa20071129-commits.github.io/renovateplus_demo/" target="_blank" class="btn-url">サイトを見る</a>
+      <a href="https://github.com/sudo/site2" target="_blank" class="btn-url">GitHub</a>
+    </div>
   </section>
 
   <!-- Site 3 -->
@@ -63,33 +80,36 @@
       <img src="images/site3/home_4.png" alt="Site3 ホーム4">
       <img src="images/site3/thanks.png" alt="Site3 ありがとうございました">
     </div>
-    <p style="text-align:center; margin-top:15px;">
-      <a href="https://hiromasa20071129-commits.github.io/renovate_support/" target="_blank">🔗 実際のサイトを見る</a>
-    </p>
+    <div class="site-info">
+      <p class="description">
+        制作意図：自己紹介＋スキル展示のミニサイトとして作成。ポートフォリオ全体のナビゲーションやデザイン統一を意識。<br>
+        使用技術：HTML5 / CSS3 / JavaScript（簡易モーダル・スクロール演出）<br>
+        ポイント：レスポンシブデザインの基礎を練習。セクションごとに背景や余白を調整して、読みやすさと見た目の整えを意識。
+      </p>
+      <a href="https://hiromasa20071129-commits.github.io/renovate_support/" target="_blank" class="btn-url">サイトを見る</a>
+      <a href="https://github.com/sudo/site3" target="_blank" class="btn-url">GitHub</a>
+    </div>
   </section>
 
-<div id="lightbox">
-  <img src="" alt="拡大画像">
-</div>
-<script>
-const lightbox = document.getElementById('lightbox');
-const imgs = document.querySelectorAll('.screenshots img');
-const lightboxImg = lightbox.querySelector('img');
+  <div id="lightbox">
+    <img src="" alt="拡大画像">
+  </div>
 
-imgs.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.style.display = 'flex';
-  });
-});
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const imgs = document.querySelectorAll('.screenshots img');
+    const lightboxImg = lightbox.querySelector('img');
 
-lightbox.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-</script>
+    imgs.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
-
-
-
-
