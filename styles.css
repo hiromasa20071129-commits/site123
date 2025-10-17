@@ -17,18 +17,26 @@ h1, h2 {
 /* ============================= */
 /* ヘッダー */
 /* ============================= */
+/* ============================= */
+/* ヘッダー */
+/* ============================= */
 header {
   background-color: #4a90e2;
   color: white;
   padding: 40px 20px;
   text-align: center;
-  transform: translateX(-3cm); /* ← 左に3cmずらす */
 }
 
+header h1, header p {
+  transform: translateX(-3cm);
+  display: inline-block;
+  text-align: left;
+}
 
 header p {
   font-size: 1.2em;
 }
+
 
 /* ============================= */
 /* セクション共通 */
@@ -138,4 +146,5 @@ footer {
   color: white;
   margin-top: 50px;
 }
+
 
