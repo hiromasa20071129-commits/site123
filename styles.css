@@ -22,7 +22,9 @@ header {
   color: white;
   padding: 40px 20px;
   text-align: center;
+  transform: translateX(-3cm); /* ← 左に3cmずらす */
 }
+
 
 header p {
   font-size: 1.2em;
@@ -136,3 +138,4 @@ footer {
   color: white;
   margin-top: 50px;
 }
+
